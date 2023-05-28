@@ -1,0 +1,32 @@
+.text {
+  &__title {
+    &-h2 {
+      &:not(&--bold) {
+        font-family: 'Montserrat Light';
+      }
+
+      &:not(&--large) {
+        @include adaptive-font(5, 2.4);
+        line-height: 120%;
+      }
+
+      &--bold {
+        font-family: 'Montserrat Bold';
+      }
+
+      &--large {
+        @include adaptive-font(7, 3);
+        line-height: 100%;
+      }
+    }
+  }
+
+  &__description {
+    font-family: 'Montserrat Medium';
+    @include adaptive-font(2, 1.2);
+    line-height: 2.4rem;
+    @include mobile {
+      line-height: 1.5rem;
+    }
+  }
+}
