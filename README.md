@@ -2,6 +2,10 @@
 
 v19.7.0
 
+# Create env
+
+cp .env.local .env
+
 # HUSKY INSTALL
 
 npm i -g husky
