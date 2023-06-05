@@ -15,7 +15,7 @@
         <button v-if="count" type="button" class="button" @click="cartService.removeFromCart(id)">
           <v-icon v-if="count" name="minus" class="minus" />
         </button>
-        <span class="price">{{ count ? 620 * count : 620 }} ₽</span>
+        <span class="price">{{ count ? price * count : price }} ₽</span>
         <button v-if="count" type="button" class="button" @click="cartService.addToCart(id)">
           <v-icon v-if="count" name="plus" class="plus" />
         </button>
@@ -47,6 +47,10 @@ const props = defineProps({
     default: ''
   },
   weight: {
+    type: Number,
+    default: 0
+  },
+  price: {
     type: Number,
     default: 0
   },
