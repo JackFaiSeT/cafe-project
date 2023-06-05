@@ -24,7 +24,7 @@ export const useMediaQueriesStore = defineStore('mediaQueries', () => {
   })
 
   onUnmounted(() => {
-    window.addEventListener('resize', checkQueries)
+    window.removeEventListener('resize', checkQueries)
   })
 
   const isDesktop = computed(() => isDesktopData.value)
